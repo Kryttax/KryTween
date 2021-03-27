@@ -1,0 +1,17 @@
+{
+  "name": "com.kryttax.krytween",
+  "version": "0.9.0",
+  "displayName": "KryTween",
+  "description": "Simple Tween Tool for UI elements in Unity.",
+  "unity": "2019.1",
+  "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "author": {
+    "name": "Kryttax",
+    "email": "kryttax@gmail.com",
+    "url": "https://github.com/Kryttax"
+  }
+}
