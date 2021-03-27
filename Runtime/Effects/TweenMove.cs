@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace KryTween.Scripts.Effects
+namespace KryTween.Effects
 {
-    public class MoveRectEffect : IUIEffect
+    public class TweenMove : ITweenEffect
     {
         private RectTransform RectTransform { get; }
         private Vector2 FinalPosition { get; }
         private float MoveSpeed { get; }
 
-        public MoveRectEffect(RectTransform rectTransform, Vector2 finalPosition, float moveSpeed)
+        public TweenMove(RectTransform rectTransform, Vector2 finalPosition, float moveSpeed)
         {
             RectTransform = rectTransform;
             FinalPosition = finalPosition;

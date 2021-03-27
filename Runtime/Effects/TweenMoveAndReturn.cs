@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace KryTween.Scripts.Effects
+namespace KryTween.Effects
 {
-    public class MoveAndReturnEffect : IUIEffect
+    public class TweenMoveAndReturn : ITweenEffect
     {
         private RectTransform RectTransform { get; }
         private Vector2 InitialPosition { get; }
@@ -11,7 +11,7 @@ namespace KryTween.Scripts.Effects
         private float MoveSpeed { get; }
         private YieldInstruction Wait { get; }
 
-        public MoveAndReturnEffect(RectTransform rectTransform, Vector2 finalPosition, float moveSpeed, YieldInstruction wait)
+        public TweenMoveAndReturn(RectTransform rectTransform, Vector2 finalPosition, float moveSpeed, YieldInstruction wait)
         {
             InitialPosition = rectTransform.anchoredPosition;
             RectTransform = rectTransform;

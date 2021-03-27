@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace KryTween.Scripts.Effects
+namespace KryTween.Effects
 {
-    public class ScaleRectEffect : IUIEffect
+    public class TweenScale : ITweenEffect
     {
         private RectTransform RectTransform { get; }
         private Vector3 MaxSize { get; }
         private float ScaleSpeed { get; }
         private YieldInstruction Wait { get; }
 
-        public ScaleRectEffect(RectTransform rectTransform, Vector3 maxSize, float scaleSpeed, YieldInstruction wait)
+        public TweenScale(RectTransform rectTransform, Vector3 maxSize, float scaleSpeed, YieldInstruction wait)
         {
             RectTransform = rectTransform;
             MaxSize = maxSize;
