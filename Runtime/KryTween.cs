@@ -14,17 +14,23 @@ namespace KryTween
             ExecuteEffect(owner, newEffect);
         }
 
-        public static void MoveAndReturn(MonoBehaviour owner, RectTransform rectTransform, Vector2 finalPosition, float moveSpeed, float time)
+        public static void MoveAndReturn(MonoBehaviour owner, RectTransform rectTransform, Vector2 finalPosition, float moveSpeed, float waitTime)
         {
-            YieldInstruction wait = new WaitForSeconds(time);
+            YieldInstruction wait = new WaitForSeconds(waitTime);
             TweenMoveAndReturn newEffect = new TweenMoveAndReturn(rectTransform, finalPosition, moveSpeed, wait);
             ExecuteEffect(owner, newEffect);
         }
 
-        public static void ScaleAndReturn(MonoBehaviour owner, RectTransform rectTransform, Vector3 finalScale, float scaleSpeed, float time)
+        public static void Scale(MonoBehaviour owner, RectTransform rectTransform, Vector3 finalScale, float scaleSpeed)
         {
-            YieldInstruction wait = new WaitForSeconds(time);
-            TweenScale newEffect = new TweenScale(rectTransform, finalScale, scaleSpeed, wait);
+            TweenScale newEffect = new TweenScale(rectTransform, finalScale, scaleSpeed);
+            ExecuteEffect(owner, newEffect);
+        }
+
+        public static void ScaleAndReturn(MonoBehaviour owner, RectTransform rectTransform, Vector3 finalScale, float scaleSpeed, float waitTime)
+        {
+            YieldInstruction wait = new WaitForSeconds(waitTime);
+            TweenScaleAndReturn newEffect = new TweenScaleAndReturn(rectTransform, finalScale, scaleSpeed, wait);
             ExecuteEffect(owner, newEffect);
         }
 

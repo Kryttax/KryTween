@@ -24,8 +24,8 @@ namespace KryTween.Effects
 
             while (RectTransform.anchoredPosition != FinalPosition)
             {
-                time += Time.deltaTime * MoveSpeed;
-                var move = Vector2.Lerp(currentPosition, FinalPosition, time);
+                time += Time.deltaTime;
+                var move = Vector2.Lerp(currentPosition, FinalPosition, time / MoveSpeed);
                 RectTransform.anchoredPosition = move;
                 yield return null;
             }
